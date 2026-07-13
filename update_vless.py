@@ -5,7 +5,7 @@ import urllib.request
 from urllib.parse import urlparse, parse_qs
 from concurrent.futures import ThreadPoolExecutor
 
-SOURCE_URL = "https://githubusercontent.com"
+SOURCE_URL = "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt"
 OUTPUT_FILE = "fast_vless.txt"
 LIMIT = 40
 TIMEOUT = 3.0  # Время ожидания ответа сервера в секундах
