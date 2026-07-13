@@ -2,100 +2,122 @@ import socket
 import ssl
 import time
 import urllib.request
-from urllib.parse import urlparse
-# updateVerifyParametersNavigation
-SOURCE_URL = "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt"
+from urllib.parse import urlparse, parse_qs
+from concurrent.futures import ThreadPoolExecutor
+
+SOURCE_URL = "https://githubusercontent.com"
 OUTPUT_FILE = "fast_vless.txt"
 LIMIT = 40
-TIMEOUT = 3.0  # Увеличиваем таймаут для полноценного HTTP-ответа
+TIMEOUT = 3.0  # Время ожидания ответа сервера в секундах
 
-def check_http_access(host, port):
+def verify_vless_reality(link):
     """
-    Проверяет реальный HTTP-доступ, отправляя валидный HTTP-запрос
-    и ожидая код ответа (например, 200, 301, 400, 404)
+    Глубокая проверка VLESS прокси. 
+    Имитирует TLS-рукопожатие с проверкой SNI (сервера маскировки).
     """
-    start_time = time.time()
-    try:
-        # Создаем TCP соединение
-        sock = socket.create_connection((host, int(port)), timeout=TIMEOUT)
-
-        # Оборачиваем в SSL, так как VLESS обычно работает поверх TLS (порт 443)
-        context = ssl._create_unverified_context()
-        secure_sock = context.wrap_socket(sock, server_hostname=host)
-
-        # Отправляем простейший HTTP-запрос к серверу
-        http_request = f"GET / HTTP/1.1\r\nHost: {host}\r\nConnection: close\r\n\r\n"
-        secure_sock.sendall(http_request.encode('utf-8'))
-
-        # Читаем первый кусочек ответа
-        response = secure_sock.recv(1024).decode('utf-8', errors='ignore')
-        secure_sock.close()
-
-        # Если сервер ответил валидным HTTP-статусом, значит веб-сервер активен
-        if "HTTP/" in response:
-            # Извлекаем код ответа (например, 200, 404, 400)
-            status_line = response.split('\r\n')[0]
-            ping = (time.time() - start_time) * 1000
-            return ping, status_line
-
-        return float('inf'), None
-    except Exception:
-        return float('inf'), None
-
-
-def parse_vless(link):
     try:
         parsed = urlparse(link.strip())
         if parsed.scheme != 'vless':
             return None
+        
+        # Извлекаем хост и порт
         netloc = parsed.netloc
         if '@' in netloc:
             netloc = netloc.split('@')[-1]
-        if ':' in netloc:
-            host, port = netloc.split(':')
-            return host, int(port)
+        host, port = netloc.split(':')
+        port = int(port)
+        
+        # Извлекаем параметры Reality (SNI / Server Name)
+        query_params = parse_qs(parsed.query)
+        sni = query_params.get('sni', [host])[0]  # Если sni нет, берем сам хост
+        security = query_params.get('security', [''])[0]
+
+        start_time = time.time()
+        
+        # 1. Проверяем базовое TCP соединение
+        sock = socket.create_connection((host, port), timeout=TIMEOUT)
+        
+        # 2. Если прокси использует шифрование (reality или tls) — делаем честный TLS-Handshake
+        if security in ['reality', 'tls']:
+            context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+            context.check_hostname = False
+            context.verify_mode = ssl.CERT_NONE
+            
+            # Настраиваем шифры, похожие на современные браузеры, чтобы обмануть ТСПУ
+            context.set_ciphers('ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256')
+            
+            secure_sock = context.wrap_socket(sock, server_hostname=sni)
+            
+            # Имитируем отправку HTTP-запроса к сайту маскировки через установленный TLS туннель
+            http_request = f"GET / HTTP/1.1\r\nHost: {sni}\r\nUser-Agent: Mozilla/5.0\r\nConnection: close\r\n\r\n"
+            secure_sock.sendall(http_request.encode('utf-8'))
+            
+            # Читаем ответ. Живой сервер маскировки Reality ОБЯЗАН ответить
+            response = secure_sock.recv(512).decode('utf-8', errors='ignore')
+            secure_sock.close()
+            
+            if not response or "HTTP/" not in response:
+                return None  # Сервер сбросил соединение на этапе TLS (блокировка)
+        else:
+            # Если это простой VLESS без TLS (например, через WS)
+            sock.sendall(b"GET / HTTP/1.1\r\n\r\n")
+            response = sock.recv(512).decode('utf-8', errors='ignore')
+            sock.close()
+            if "HTTP/" not in response:
+                return None
+
+        ping = (time.time() - start_time) * 1000
+        return ping
+
     except Exception:
-        pass
+        return None
+
+def worker(link):
+    """Функция-помощник для многопоточного перебора"""
+    ping = verify_vless_reality(link)
+    if ping is not None:
+        return link, ping
     return None
 
-
 def main():
-    print("Скачивание списка...")
+    print("Скачивание списка конфигураций...")
     try:
         req = urllib.request.Request(SOURCE_URL, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req) as response:
             lines = response.read().decode('utf-8').splitlines()
     except Exception as e:
-        print(f"Ошибка скачивания: {e}")
+        print(f"Ошибка при скачивании исходного файла: {e}")
         return
 
-    tested_configs = []
-
+    configs_to_test = []
     for line in lines:
         link = line.strip()
-        if not link or link.startswith('#') or not link.startswith('vless://'):
-            continue
+        if link.startswith('vless://'):
+            configs_to_test.append(link)
 
-        parsed_data = parse_vless(link)
-        if parsed_data:
-            host, port = parsed_data
-            ping, status = check_http_access(host, port)
+    print(f"Найдено {len(configs_to_test)} потенциальных VLESS ссылок. Начинаем глубокий тест...")
 
-            if ping != float('inf'):
-                tested_configs.append((link, ping))
-                print(f"Доступен: {host}:{port} -> {ping:.1f} мс (Статус: {status})")
-            else:
-                print(f"Нет HTTP ответа: {host}:{port}")
+    valid_configs = []
+    
+    # Запускаем параллельную проверку в 20 потоков, чтобы гитхаб выполнял задачу быстро
+    with ThreadPoolExecutor(max_workers=20) as executor:
+        results = executor.map(worker, configs_to_test)
+        for res in results:
+            if res:
+                link, ping = res
+                valid_configs.append((link, ping))
+                print(f" ПРОВЕРЕН: {urlparse(link).netloc.split('@')[-1]} -> {ping:.1f} мс")
 
-    tested_configs.sort(key=lambda x: x[1])
-    top_configs = tested_configs[:LIMIT]
+    # Сортируем строго по реальному пингу от меньшего к большему
+    valid_configs.sort(key=lambda x: x[1])
+    top_configs = valid_configs[:LIMIT]
 
+    # Записываем чистый результат
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         for config, _ in top_configs:
             f.write(config + "\n")
-
-    print(f"\nОбновлено! Сохранено конфигураций: {len(top_configs)}")
-
+            
+    print(f"\nТестирование завершено. Сохранено топ-{len(top_configs)} рабочих конфигураций.")
 
 if __name__ == "__main__":
     main()
