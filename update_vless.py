@@ -3,10 +3,19 @@ import ssl
 import time
 import urllib.request
 import json
+import urllib.parse
 from urllib.parse import urlparse, parse_qs
 from concurrent.futures import ThreadPoolExecutor
 
-SOURCE_URL = "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt"
+# НАСТРОЙКИ: Теперь здесь список (массив) ваших источников
+SOURCES = [
+    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt"
+]
+
+# Ссылка, для которой нужно помечать конфигурации префиксом "WL" в названии
+WL_SOURCE_URL = "https://githubusercontent.com"
+
 OUTPUT_FILE = "fast_vless.txt"
 LIMIT = 40
 TIMEOUT = 3.0  # Ожидание ответа в секундах
@@ -14,10 +23,8 @@ TIMEOUT = 3.0  # Ожидание ответа в секундах
 def get_country_code(host):
     """Определяет код страны для IP-адреса или домена"""
     try:
-        # Если в ссылке домен, преобразуем его в IP для корректного гео-запроса
         ip = socket.gethostbyname(host)
         geo_url = f"http://ip-api.com{ip}?fields=status,countryCode"
-        
         req = urllib.request.Request(geo_url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=2.0) as response:
             data = json.loads(response.read().decode('utf-8'))
@@ -28,7 +35,7 @@ def get_country_code(host):
     return "UNKNOWN"
 
 def verify_vless_reality(link):
-    """Глубокая TLS-проверка с фильтрацией по ГЕО (исключая RU и UA)"""
+    """Глубокая TLS-проверка с фильтрацией по ГЕО (исключая RU, UA и вхождения Russia)"""
     try:
         parsed = urlparse(link.strip())
         if parsed.scheme != 'vless':
@@ -41,23 +48,23 @@ def verify_vless_reality(link):
         host, port = netloc.split(':')
         port = int(port)
         
-        # Шаг 1: Гео-фильтрация (Проверяем страну перед отправкой тяжелых пакетов)
+        # Шаг 1: Гео-фильтрация по IP
         country = get_country_code(host)
         if country in ['RU', 'UA']:
-            print(f" ИГНОР: {host} находится в {country} (Пропуск)")
+            print(f" ИГНОР: {host} физически в {country}")
             return None
         
         # Извлекаем параметры Reality
         query_params = parse_qs(parsed.query)
-        sni = query_params.get('sni', [host])[0]
-        security = query_params.get('security', [''])[0]
+        sni = query_params.get('sni', [host])
+        security = query_params.get('security', [''])
 
         start_time = time.time()
         
         # Шаг 2: TCP Соединение
         sock = socket.create_connection((host, port), timeout=TIMEOUT)
         
-        # Шаг 3: TLS-Handshake (Имитация браузера для пробития ТСПУ)
+        # Шаг 3: TLS-Handshake (Имитация браузера)
         if security in ['reality', 'tls']:
             context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
             context.check_hostname = False
@@ -66,7 +73,7 @@ def verify_vless_reality(link):
             
             secure_sock = context.wrap_socket(sock, server_hostname=sni)
             
-            # Отправляем HTTP-запрос сайту маскировки внутри туннеля
+            # HTTP-запрос сайту маскировки
             http_request = f"GET / HTTP/1.1\r\nHost: {sni}\r\nUser-Agent: Mozilla/5.0\r\nConnection: close\r\n\r\n"
             secure_sock.sendall(http_request.encode('utf-8'))
             
@@ -76,7 +83,7 @@ def verify_vless_reality(link):
             if not response or "HTTP/" not in response:
                 return None
         else:
-            # Для базовых WS-конфигураций без шифрования
+            # Для базовых WS-конфигураций без TLS
             sock.sendall(b"GET / HTTP/1.1\r\n\r\n")
             response = sock.recv(512).decode('utf-8', errors='ignore')
             sock.close()
@@ -89,53 +96,73 @@ def verify_vless_reality(link):
     except Exception:
         return None
 
-def worker(link):
-    """Потоковый обработчик"""
+def worker(item):
+    """Потоковый обработчик (принимает кортеж ссылка-страна)"""
+    link, is_wl = item
     res = verify_vless_reality(link)
     if res is not None:
         ping, country = res
+        
+        # Если ссылка из белого списка, модифицируем ее фрагмент (имя после #)
+        if is_wl:
+            parsed = urllib.parse.urlparse(link)
+            new_fragment = f"WL-{parsed.fragment}" if parsed.fragment else "WL-Server"
+            link = urllib.parse.urlunparse(parsed._replace(fragment=new_fragment))
+            
         return link, ping, country
     return None
 
 def main():
-    print("Скачивание списка конфигураций...")
-    try:
-        req = urllib.request.Request(SOURCE_URL, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req) as response:
-            lines = response.read().decode('utf-8').splitlines()
-    except Exception as e:
-        print(f"Ошибка при скачивании исходного файла: {e}")
-        return
-
     configs_to_test = []
-    for line in lines:
-        link = line.strip()
-        if link.startswith('vless://'):
-            configs_to_test.append(link)
+    
+    # Цикл по всем указанным источникам
+    for url in SOURCES:
+        print(f"Скачивание списка из источника: {url}")
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req) as response:
+                lines = response.read().decode('utf-8').splitlines()
+        except Exception as e:
+            print(f"Ошибка при скачивании {url}: {e}")
+            continue
 
-    print(f"Найдено {len(configs_to_test)} потенциальных VLESS ссылок. Начинаем многопоточный тест...")
+        is_wl = (url == WL_SOURCE_URL)
+
+        for line in lines:
+            link = line.strip()
+            if not link.startswith('vless://'):
+                continue
+                
+            # Проверка текста на вхождение слова "russia" (без учета регистра)
+            if "russia" in link.lower():
+                print(f" СКИП (Найдено 'Russia' в тексте ссылки): {link[:40]}...")
+                continue
+                
+            configs_to_test.append((link, is_wl))
+
+    print(f"\nСбор завершен. Всего ссылок для проверки: {len(configs_to_test)}. Начинаем многопоточный тест...")
 
     valid_configs = []
     
-    # Ограничиваем до 15 потоков, чтобы GeoIP API не выдало бан за слишком частые запросы
+    # 15 параллельных потоков для предотвращения бана от GeoIP API
     with ThreadPoolExecutor(max_workers=15) as executor:
         results = executor.map(worker, configs_to_test)
         for res in results:
             if res:
                 link, ping, country = res
                 valid_configs.append((link, ping))
-                print(f" ОК [{country}]: {urlparse(link).netloc.split('@')[-1]} -> {ping:.1f} мс")
+                print(f" ОК [{country}]: {urllib.parse.urlparse(link).fragment or 'Без имени'} -> {ping:.1f} мс")
 
-    # Сортировка по реальному пингу (от быстрых к медленным)
-    valid_configs.sort(key=lambda x: x[1])
+    # Сортировка по пингу
+    valid_configs.sort(key=lambda x: x)
     top_configs = valid_configs[:LIMIT]
 
-    # Запись итогового списка топ-40 без RU и UA
+    # Сохранение результатов
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         for config, _ in top_configs:
             f.write(config + "\n")
             
-    print(f"\nТестирование завершено. Исключены RU и UA. Сохранено топ-{len(top_configs)} рабочих конфигураций.")
+    print(f"\nГотово! Отфильтровано. Топ-{len(top_configs)} рабочих конфигураций записаны в {OUTPUT_FILE}.")
 
 if __name__ == "__main__":
     main()
