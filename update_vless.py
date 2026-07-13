@@ -96,14 +96,31 @@ def verify_vless_reality(link):
     except Exception:
         return None
 
+# Замените функцию worker в вашем скрипте на этот вариант:
+
+# Список стран, которые находятся близко к РФ и дают лучший пинг 
+# (DE - Германия, NL - Нидерланды, FI - Финляндия, SE - Швеция, PL - Польша, AT - Австрия, CZ - Чехия)
+ALLOWED_COUNTRIES = ['DE', 'NL', 'FI', 'SE', 'PL', 'AT', 'CZ', 'EE', 'LT', 'LV']
+
 def worker(item):
-    """Потоковый обработчик (принимает кортеж ссылка-страна)"""
+    """Потоковый обработчик с жестким географическим и скоростным фильтром"""
     link, is_wl = item
     res = verify_vless_reality(link)
     if res is not None:
         ping, country = res
         
-        # Если ссылка из белого списка, модифицируем ее фрагмент (имя после #)
+        # 1. Жесткий фильтр по странам: если сервера нет в списке ALLOWED_COUNTRIES, удаляем его
+        if country not in ALLOWED_COUNTRIES:
+            print(f" СКИП [{country}]: Сервер слишком далеко, пинг будет плохим")
+            return None
+            
+        # 2. Фильтр по пингу дата-центра: если даже на Гитхабе пинг до него больше 80мс, 
+        # то на мобильном интернете в РФ он превратится в 200+ мс. Убираем его.
+        if ping > 80.0:
+            print(f" СКИП: Высокий базовый пинг на GitHub ({ping:.1f} мс)")
+            return None
+        
+        # Если сервер идеален по гео и скорости, добавляем префикс WL (если нужно)
         if is_wl:
             parsed = urllib.parse.urlparse(link)
             new_fragment = f"WL-{parsed.fragment}" if parsed.fragment else "WL-Server"
