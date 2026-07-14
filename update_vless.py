@@ -11,6 +11,7 @@ SOURCES = [
 ]
 
 OUTPUT_FILE = "fast_vless.txt"
+LIMIT = 50    # Максимальное количество рабочих ссылок для сохранения
 TIMEOUT = 3.0  # Ожидание ответа сервера в секундах
 
 def check_server(link):
@@ -20,30 +21,29 @@ def check_server(link):
         if parsed.scheme != 'vless':
             return None
         
+        # Извлекаем хост и порт
         netloc = parsed.netloc
         if '@' in netloc:
             netloc = netloc.split('@')[-1]
         host, port = netloc.split(':')
         port = int(port)
         
-        # 1. Защищенное TCP соединение
+        # Шаг 1: Проверка TCP-соединения
         sock = socket.create_connection((host, port), timeout=TIMEOUT)
         
-        # 2. TLS-Handshake
+        # Шаг 2: Базовый TLS-Handshake
         context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
         context.check_hostname = False
         context.verify_mode = ssl.CERT_NONE
         
         secure_sock = context.wrap_socket(sock, server_hostname=host)
         
-        # 3. Отправляем легкий запрос, чтобы убедиться, что сервер пропускает трафик
-        # (Имитируем базовый запрос к сайту маскировки)
+        # Шаг 3: Отправка легкого HTTP-запроса для проверки ответа
         http_request = f"GET / HTTP/1.1\r\nHost: {host}\r\nConnection: close\r\n\r\n"
         secure_sock.sendall(http_request.encode('utf-8'))
         
-        # Читаем первые байты ответа. Если сервер «живой» — он что-то ответит
+        # Читаем первые байты ответа
         response = secure_sock.recv(16)
-        
         secure_sock.close()
         
         if response:
@@ -88,12 +88,15 @@ def main():
                 valid_configs.append(res)
                 print(f" Рабочий: {urlparse(res).fragment or 'Без имени'}")
 
+    # Применение лимита на количество строк
+    top_configs = valid_configs[:LIMIT]
+
     # Сохранение результатов в файл
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        for config in valid_configs:
+        for config in top_configs:
             f.write(config + "\n")
             
-    print(f"\nПроверка завершена. Рабочие конфигурации ({len(valid_configs)} шт.) записаны в {OUTPUT_FILE}.")
+    print(f"\nПроверка завершена. Топ-{len(top_configs)} рабочих конфигураций записаны в {OUTPUT_FILE}.")
 
 if __name__ == "__main__":
     main()
