@@ -14,7 +14,7 @@ SOURCES = [
 ]
 
 # Ссылка, для которой нужно помечать конфигурации префиксом "WL" в названии
-WL_SOURCE_URL = "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt"
+WL_SOURCE_URL = "https://raw.githubusercontent.com/"
 
 OUTPUT_FILE = "fast_vless.txt"
 LIMIT = 40
