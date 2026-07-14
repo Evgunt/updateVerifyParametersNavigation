@@ -6,8 +6,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 # НАСТРОЙКИ: Ссылки на файлы с конфигурациями
 SOURCES = [
-    "https://githubusercontent.com",
-    "https://githubusercontent.com"
+    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt"
 ]
 
 OUTPUT_FILE = "fast_vless.txt"
