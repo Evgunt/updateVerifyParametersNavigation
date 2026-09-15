@@ -1,60 +1,60 @@
+vless://0a2dde28-70da-4863-a06f-35d007d94d35@46.8.200.91:443?&security=tls&fp=chrome&sni=cf3.rumedia-cdn.com&type=ws&headerType=none&host=cf3.rumedia-cdn.com&path=/casc# By EbraSha 🌌 | 203ms
 vless://423b1d79-08c4-403f-9d5e-c541f791b55f@178.250.186.139:8443?sni=auto.cendora.ru&flow=xtls-rprx-vision-udp443&fp=chrome&security=tls#%E4%BF%84%E7%BD%97%E6%96%AF%E8%81%94%E9%82%A6_091510034 | 198ms
-vless://93455e57-7599-4d63-baca-27f5e1762832@185.143.235.235:80?type=ws&encryption=none&host=c3.novin-devs.ir&security=none# By EbraSha 🌃 | 111ms
-vless://2601740f-12a1-4e61-ba12-4e84915f5ed8@185.143.234.235:80?security=none&encryption=none&host=vixon.portab.org&type=ws#@Vip_Security join us - 409 | 127ms
+vless://1cd5fa1a-fae9-45a3-a4b8-2bc636ec0952@185.143.234.200:80?encryption=none&amp;type=xhttp# By EbraSha ⚔️ | 126ms
+vless://985acae9-b627-417c-95a8-36b3e3677be2@185.143.233.120:2086/?type=ws&encryption=none&host=getasa.ir&path=%2Ftelegram-shrakpublic%3Fed%3D2048# By EbraSha 🦇 | 126ms
+vless://b584ac42-15cb-d8ad-5338-1d07a4e98a6e@185.215.234.3:443?&security=tls&fp=chrome&sni=dl.artafarx.ir&type=ws&headerType=none&host=dl.artafarx.ir&path=%2F%3Fed%3D2048#%E9%98%BF%E8%81%94%E9%85%8B_091510023 | 119ms
 vless://014f817e-b200-4e6f-bfda-2c1cbf05aa6a@185.143.232.201:80/?type=ws&encryption=none&path=%2F# By EbraSha 📶 | 118ms
-vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws# By EbraSha 🚬 | 135ms
-vless://621c3631-ed9b-453a-b486-4068212bf483@185.143.233.233:2082?path=%2F&amp;security=none&amp;encryption=none&amp;host=meli.hoorakan-cloud.ir&amp;type=ws# By EbraSha 💣 | 123ms
+vless://93455e57-7599-4d63-baca-27f5e1762832@185.143.235.235:80?type=ws&encryption=none&host=c3.novin-devs.ir&security=none# By EbraSha 🌃 | 111ms
+vless://46aea670-5e6c-40af-9b99-95585dd71cc3@185.143.233.5:443?path=/?ed=443&security=tls&encryption=none&host=1001cns.com.wnticacenidk1.abrmahanair.com&fp=chrome&type=ws&sni=1001cns.com# By EbraSha 🕹️ | 118ms
+vless://bc4d97ba-d54f-4555-ba71-f7421796d92c@185.143.234.111:443?path=/&security=tls&encryption=none&host=frontend.parhamm2.ir&fp=chrome&…#4Jadi-10f0138bd2 | 124ms
+vless://60404e8a-a1d0-4374-9b4c-6aeb32dcf51b@185.143.233.235:8080?path=%2F&security=none&encryption=none&host=Test.bosbedetoto.site&type=ws# By EbraSha 🤖 | 121ms
+vless://6b7cc59c-deb1-41b7-8758-c582c00c1fe3@185.143.233.200:2095?encryption=none&security=none&type=ws&host=Tu5.pokerpings.com&path=/# By EbraSha 📶 | 125ms
 vless://0053c51b-b1f6-4d11-a087-ad795f65bec1@185.143.233.43:8880?path=%2F&security=none&encryption=none&host=motabarim3.service-panelbaz.ir&type=ws#@Vip_Security join us - 40 | 125ms
+vless://22109ab6-bfdd-4062-ae1c-054c74353e39@185.143.233.235:80?encryption=none&security=none&type=tcp&headerType=none&host=vixon.portab.org# By EbraSha 🦅 | 129ms
+vless://1d2717a5-7e88-40fd-a55d-ba506f44dc96@185.215.235.195:80?path=/?ed=2048&security=none&encryption=none&host=dl.armanstore22.ir&type=ws# By EbraSha 🌪️ | 113ms
+vless://7b81a350-89c3-47da-a3a9-5f2b65313d03@snapp.ir:2052?path=/api/auth&security=none&encryption=none&host=api5.iraniandex.ir&type=httpupgrade# By EbraSha 🌃 | 131ms
+trojan://biS(YrwB,3L$@185.143.235.5:443/?type=tcp&security=tls&sni=mydigipay.com# By EbraSha 📼 | 113ms
+vless://38dd06a1-e1cb-492b-bb87-218ce05d0d67@185.143.233.5:80?&type=ws&headerType=none&host=fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir&path=%2F# By EbraSha 🐉 | 122ms
+vless://46aea670-5e6c-40af-9b99-95585dd71cc3@185.143.234.120:443?path=/?ed=443&security=tls&encryption=none&host=irancellapp.ir.turcancowntiv.airasiadl.com&fp=chrome&type=ws&sni=irancellapp.ir# By EbraSha 📼 | 128ms
+vless://44e68526-3852-4495-bc4f-80e80260ed3b@snapp.ir:2086?path=%2F&security=none&encryption=none&host=beraghsaontop.dracodcodya.ir&type=ws#@Vip_Security join us - 825 | 357ms
+vless://60e6320d-60c6-43f5-9f54-686089edd608@185.143.235.245:2052?host=english.paradiseshop.click&path=%2Fpath&security=none&type=ws# By EbraSha 🚨 | 112ms
+vless://904cd6f2-9740-44e5-9353-58207c8e64c7@185.143.232.253:8080?encryption=none&security=none&type=ws&path=/&host=2ja0n7x60a.star2.panelpars.ir# By EbraSha 🔐 | 111ms
+vless://bc2c9bea-93f6-448a-9162-0077b4c0dd6f@185.143.233.217:80?path=%2Fws&security=none&encryption=none&host=me.chehre-negar.ir&type=ws#[27137][IR][0][VLESS][None][ext_raw.githubusercontent.com][2026-09-13][2026-09-13 01:45] | 127ms
+vless://ec9e4d1a-46e1-4405-a559-7fda3501cf7b@forallpanel.srtongston.ir:80?encryption=mlkem768x25519plus.random.0rtt.HdYYG9FCDbmM-wWYng30EG_EqL3MRjCAFrjwTsv833o&type=httpupgrade&path=%2F&host=rubika.ir.Play.google.com.www.speedtest.net.chaTgpt.com.openai.com.icloud.com.OGXfeggx.Netherlands1.GoCrxtxh.francee1.postshup.ir.#%E4%BC%8A%E6%9C%97_091510044 | 334ms
+vless://41bc5a50-7c41-4078-9a2a-611ab1c6dddb@snapp.ir:2095?path=%2F&security=none&encryption=none&host=lizardf1.fastshop11.ir&type=ws# By EbraSha 💻 | 368ms
 vless://8fc836e4-f72f-40d7-8a55-8677324a2079@185.143.234.122:80/?type=ws&encryption=none&flow=&host=S4.koremusic.ir&path=%2F# By EbraSha 🗿 | 125ms
 vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@185.143.232.224:80?path=%2Fnews&security=none&encryption=none&host=bama.ir.usa.cdnir.org&type=ws# By EbraSha ♣️ | 116ms
 vless://99431a1c-670c-4dee-a374-2b5a93c9002f@185.143.234.120:80/?type=ws&encryption=none&path=%2F# By EbraSha 🪬 | 128ms
-vless://46aea670-5e6c-40af-9b99-95585dd71cc3@185.143.234.200:443?path=/?ed=443&security=tls&encryption=none&host=aiomovie.ir.wnticaceninl10.mahanmapcdn.com&fp=chrome&type=ws&sni=aiomovie.ir# By EbraSha 🧿 | 124ms
-vless://6b7cc59c-deb1-41b7-8758-c582c00c1fe3@185.143.233.200:2095?encryption=none&security=none&type=ws&host=Tu5.pokerpings.com&path=/# By EbraSha 📶 | 125ms
-vless://46aea670-5e6c-40af-9b99-95585dd71cc3@185.143.233.5:443?path=/?ed=443&security=tls&encryption=none&host=1001cns.com.wnticacenidk1.abrmahanair.com&fp=chrome&type=ws&sni=1001cns.com# By EbraSha 🕹️ | 118ms
-vless://60e6320d-60c6-43f5-9f54-686089edd608@185.143.235.245:2052?host=english.paradiseshop.click&path=%2Fpath&security=none&type=ws# By EbraSha 🚨 | 112ms
-vless://699851b9-29ba-4006-94c5-3f10a42345c1@185.143.233.238:2082?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&path=%2Flkjoiyguyrd&security=none&encryption=mlkem768x25519plus.native.0rtt.cNOAxLpAiRYXwQqJC8RyG0pVl4ghUAJZqtaxYu3O1mg&host=cn.monotic.ir&type=ws# By EbraSha ⚡ | 129ms
-vless://0a2dde28-70da-4863-a06f-35d007d94d35@46.8.200.91:443?&security=tls&fp=chrome&sni=cf3.rumedia-cdn.com&type=ws&headerType=none&host=cf3.rumedia-cdn.com&path=/casc# By EbraSha 🌌 | 203ms
-vless://1cd5fa1a-fae9-45a3-a4b8-2bc636ec0952@185.143.234.200:80?encryption=none&amp;type=xhttp# By EbraSha ⚔️ | 126ms
-vless://22109ab6-bfdd-4062-ae1c-054c74353e39@185.143.233.235:80?encryption=none&security=none&type=tcp&headerType=none&host=vixon.portab.org# By EbraSha 🦅 | 129ms
-vless://b584ac42-15cb-d8ad-5338-1d07a4e98a6e@185.215.234.3:443?&security=tls&fp=chrome&sni=dl.artafarx.ir&type=ws&headerType=none&host=dl.artafarx.ir&path=%2F%3Fed%3D2048#%E9%98%BF%E8%81%94%E9%85%8B_091510023 | 119ms
-vless://904cd6f2-9740-44e5-9353-58207c8e64c7@185.143.232.253:8080?encryption=none&security=none&type=ws&path=/&host=2ja0n7x60a.star2.panelpars.ir# By EbraSha 🔐 | 111ms
-vless://bc2c9bea-93f6-448a-9162-0077b4c0dd6f@185.143.233.217:80?path=%2Fws&security=none&encryption=none&host=me.chehre-negar.ir&type=ws#[27137][IR][0][VLESS][None][ext_raw.githubusercontent.com][2026-09-13][2026-09-13 01:45] | 127ms
-trojan://biS(YrwB,3L$@185.143.235.5:443/?type=tcp&security=tls&sni=mydigipay.com# By EbraSha 📼 | 113ms
-vless://38dd06a1-e1cb-492b-bb87-218ce05d0d67@185.143.233.5:80?&type=ws&headerType=none&host=fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir&path=%2F# By EbraSha 🐉 | 122ms
-vless://1d2717a5-7e88-40fd-a55d-ba506f44dc96@185.215.235.195:80?path=/?ed=2048&security=none&encryption=none&host=dl.armanstore22.ir&type=ws# By EbraSha 🌪️ | 113ms
-vless://73c4fdef-f27b-404f-8776-9fcd3d5d3acf@185.143.233.5:8880/?type=ws&encryption=none&host=getasa.ir&path=%2Fwp-admin# By EbraSha 🧠 | 132ms
-vless://334b4652-f11d-4f0a-9d26-b5c0fff6c31f@forallpanel.srtongston.ir:8880?encryption=none&security=none&type=httpupgrade&host=cdn-pro1.postshup.ir&path=%2F%3Fed%3D2082#%E5%8A%A0%E6%8B%BF%E5%A4%A7-youtube%40%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB%E5%B8%88%2003 | 353ms
-vless://4f78a389-42b5-48a0-be5e-4d23a6ff4c05@snapp.ir:8080?encryption=none&security=none&type=tcp&headerType=none&path=%2F#%40v2rayng3 | 128ms
-vless://985acae9-b627-417c-95a8-36b3e3677be2@185.143.233.120:2086/?type=ws&encryption=none&host=getasa.ir&path=%2Ftelegram-shrakpublic%3Fed%3D2048# By EbraSha 🦇 | 126ms
-vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=Sha.artarona.ir&fp=chrome&type=ws&allowInsecure=0&sni=Sha.artarona.ir#4Sarina-aa612c362e | 246ms
-vless://f9255507-1b65-433f-bfd8-193b35e068e2@104.234.239.140:80?encryption=none&security=none&type=ws&host=s5.868001.xyz&path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2#%E7%BE%8E%E5%9B%BD%28yudou789.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29 | 27ms
+vless://2601740f-12a1-4e61-ba12-4e84915f5ed8@185.143.234.235:80?security=none&encryption=none&host=vixon.portab.org&type=ws#@Vip_Security join us - 409 | 127ms
+vless://6b7cc59c-deb1-41b7-8758-c582c00c1fe3@185.143.234.200:2095?encryption=none&security=none&type=ws&host=Tu5.pokerpings.com&path=/# By EbraSha 🦂 | 119ms
 vless://a3087447-269f-43c5-a5f9-d5686f452612@185.143.233.5:2082?encryption=none&security=none&type=tcp&headerType=none&path=%2F#%40v2rayng3 | 128ms
-vless://53ffd172-de4c-002f-aa77-1a6830a36cf8@84.38.187.134:443?mode=auto&amp;path=%2Frepository%2F%3F%40MARAMBASHI_MARAMBASHI%3Fed%3D2048&amp;security=reality&amp;encryption=none&amp;pbk=QSAIpsE696lDqkumfo7dyBt92XzrVDPTF6KogbeKhGc&amp;fp=qq&amp;type=xhttp&amp;sni=git.xpkg.ru&amp;sid=2c9431dc7a306018#[13029][RU][0][VLESS][None][v2rayNG_Matsuri][2026-08-27][2026-09-13 01:45] | 141ms
-vless://facefd1f-903b-411d-b0a2-286c9a76e471@162.159.152.87:2083?path=%2FTelegram%40Telegram-------V2rayi_net_-_-_-_-Telegram-------V2rayi_net%2F%3Fed%3D2560&security=tls&encryption=none&alpn=http/1.1&host=bPB-XiaOeR886.pAGES.DEv&fp=chrome&type=ws&sni=bPB-XiaOeR886.pAGES.DEv#@Vip_Security join us - 2629 | 20ms
-vless://064a967e-0862-4cea-bdbd-9458cb7b6070@168.222.194.138:9880?&security=reality&pbk=bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU&fp=firefox&sni=dl.google.com&type=grpc&serviceName=&mode=gun#%E7%BE%8E%E5%9B%BD_0915101274 | 180ms
-vless://583ceab3-4022-4553-9158-9bedc625ad4e@164.38.155.177:8880/?type=ws&encryption=none&host=ip.langmanshanxi.top&path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2%20%2F%3Fed%3D2560# By EbraSha 🧩 | 14ms
-vless://fca01448-d84a-436e-9aec-3be1ebdfb350@199.34.228.182:2053?encryption=none&security=tls&sni=SB-1U6.PAgEs.dev&type=ws&host=SB-1U6.PAgEs.dev&path=%2Ffltcxoo6grqvat6v%2Fmtu4ljewms4ymdmumti3%3Fed%3D2560#%E7%BE%8E%E5%9B%BD%28yudou66.com%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29 | 17ms
-vless://0132166f-e702-48ed-a9e7-b07af768faf8@89.116.161.251:8880/?type=ws&encryption=none&host=cf.d3z.net&path=%2F# By EbraSha 🗿 | 11ms
-vless://2ee0d2aa-867e-a77e-9538-2edfc0b242aa@216.24.57.15:443?&security=tls&sni=four04-rd37.onrender.com&type=ws&headerType=none&host=four04-rd37.onrender.com&path=%2F#%E7%BE%8E%E5%9B%BD_0915101029 | 12ms
-vless://583ceab3-4022-4553-9158-9bedc625ad4e@185.193.29.177:8880/?type=ws&encryption=none&host=ip.langmanshanxi.top&path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3# By EbraSha 🛡️ | 23ms
-trojan://6884d714-d3c4-4b49-aa20-767ea92837d6@103.116.7.20:443/?type=ws&host=icecream.955850.xyz&path=%2Fproxyip%3D45.67.215.153%3A443%26proxyIP%3Dnull&security=tls&sni=icecream.955850.xyz&alpn=h3&fp=randomized# By EbraSha 🗿 | 14ms
-vless://34c01e61-f4f3-4afb-a83b-406caf8caa33@45.131.211.254:8880/?type=ws&encryption=none&host=yg.bantony199.top&path=%2F# By EbraSha 📀 | 21ms
-vless://5d16ac22-6eea-426f-b778-6f4c2961faef@212.92.101.117:9894?encryption=none&mode=gun&pbk=bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU&security=reality&serviceName=grpc-tunnel&sid=aa&sni=dl.google.com&type=grpc&fp=ios#%F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%B8%F0%9F%87%AA%20%7C%20%5B%2ACIDR%5D
-trojan://8r%3C%5B9%27l6hAO%238ZQi@167.68.11.253:443/?type=tcp&security=tls&sni=Koma-YT.PAGeS.Dev# By EbraSha 🌑 | 15ms
-vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@62.72.166.20:8880/?type=ws&encryption=none&host=reedfree8mahsang2.redorg.ir&path=%2F%3Fed%3D2560# By EbraSha 🧿 | 12ms
-vless://47e9a0db-50c6-4522-8819-502c55b06dde@159.112.235.174:2082/?type=ws&encryption=none&host=workerr.schodog1.workers.dev&path=%2F%3Fed%3D2048# By EbraSha 🩸 | 11ms
-vless://5efb52e5-6234-481e-8762-9d7cff3a56e6@46.8.209.137:443?type=grpc&security=tls&encryption=none&sni=sixseven.eurocast.work&fp=edge&alpn=h2&headerType=none&serviceName=W3pH8sN5kT2mR9vL6qC4dX7z&mode=gun# By EbraSha 🕷️ | 159ms
-vless://f0d584bc-342f-4443-ba24-79e4d0e504b1@45.85.119.246:8080?security=none&type=ws&host=late-tooth.granzinhannah.workers.dev&path=%2F%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%3Fed#🔒 VL-WS-NONE 🇷🇴 RO-45.85.119.246:8080 | 6ms
-trojan://Aimer@154.197.64.189:2087?security=tls&sni=epgc.aimercc.dpdns.org&alpn=h3&fp=randomized&allowInsecure=1&type=ws&host=epgc.aimercc.dpdns.org&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw# By EbraSha 🔮 | 7ms
-vless://d55b0559-d02a-48cb-8c4a-d3321ecd0eac@185.229.9.208:443/?type=raw&encryption=none&flow=xtls-rprx-vision&sni=www.vk.com&fp=firefox&security=reality&pbk=Rde4-AW3R30RbpIkfiRcPdFalUsLAUdgerk2IYjwkBA&sid=d8b81daaad76dc9c#[30342][RU][0][VLESS][None][ext_raw.githubusercontent.com][2026-09-13][2026-09-13 01:45] | 156ms
-vless://Telegram:@Free_VPN_CH@46.202.30.8:2096?path=/sg-lnd&security=tls&encryption=none&host=tn1rr.qzz.io&type=ws&sni=tn1rr.qzz.io# By EbraSha 🕶️ | 8ms
-vless://475f0e22-770d-4605-b333-f4783a6a0a1d@162.159.133.234:2087?path=%2F%3Bsecurity%3Dtls%3Bencryption%3Dnone%3Bhost%3DconfigngnixV2rayng.shhproxy.cfd%3Btype%3Dws%3Bsni%3DconfigngnixV2rayng.shhproxy.cfd#🔒 VL-TCP-NA 🏴‍☠️ NA-162.159.133.234:2087 | 9ms
-vless://283ee7c1-69ca-4af9-a812-2c87e6dc6cd1@192.0.63.44:8080/?type=httpupgrade&encryption=none&host=h17.Xn--gmq282ekfhyys3gs.Com.&path=%2Fspeedtest.net%3Fed%3D512# By EbraSha 🔐 | 13ms
-vless://6202b230-417c-4d8e-b624-0f71afa9c75d@185.135.9.50:8880?encryption=none&security=none&type=ws&host=vms.lifetime50.workers.dev&path=%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FYouTube%40%E5%B0%8F%E9%9D%92%E7%A7%91%E5%AD%A6%E7%BD%91%F0%9F%87%A8%F0%9F%87%B3#%E7%BE%8E%E5%9B%BD%28YouTube%40%E5%B0%8F%E9%9D%92%E7%A7%91%E5%AD%A6%E7%BD%91%EF%BC%89 | 12ms
-vless://76186f1e-3062-4a2b-98c2-fab3c61a9511@85.208.86.91:9872?&security=reality&pbk=bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU&sid=aa&fp=firefox&sni=dl.google.com&type=grpc&serviceName=&mode=gun#%E4%BF%84%E7%BD%97%E6%96%AF%E8%81%94%E9%82%A6_091510144 | 155ms
-vless://fca01448-d84a-436e-9aec-3be1ebdfb350@199.34.228.182:2083?security=tls&sni=SB-1U6.PAgeS.dEv&type=ws&host=SB-1U6.PAgeS.dEv&path=%2Furenftuu3z1kqryb%2Fmtu4ljewms4ymdmumti3%3Fed%3D2560#🔒 VL-WS-TLS 🇺🇸 US-199.34.228.182:2083 | 10ms
-vless://7967bf59-57e3-4cde-9898-527b0fe60022@88.216.67.7:8443?security=tls&type=ws&path=%2Fdula%3FTelegram-WangCai2&host=speed.dulacloud.store&ed=2560&sni=speed.dulacloud.store&fp=chrome&encryption=none#CW 🇨🇼 | @Raydikalx | D45691 | 8ms
-vless://953358cb-82ba-4296-960d-6d2ec3468f4c@13.143.137.164:9443?allowInsecure=1&sni=plaincanvas.videoclothing.xyz&flow=xtls-rprx-vision-udp443&fp=firefox&security=tls#%F0%9F%87%B9%F0%9F%87%B7TR_1%7C2.5MB/s | 146ms
-vless://fc965ad9-bdd7-4815-ad71-b39ec5972dc1@141.193.213.11:443/?type=ws&encryption=none&host=octopusss4.com&path=%2Ftsghdws&security=tls&sni=octopusss4.com#-%3E%2B%28%40DeamNet_Proxy%29%20%2827%29 | 15ms
-vless://7967bf59-57e3-4cde-9898-527b0fe60022@185.162.228.7:8443?path=%2Fdula%3FTelegram-WangCai2&security=tls&encryption=none&insecure=0&host=speed.dulacloud.store&fp=chrome&type=ws&allowInsecure=0&sni=speed.dulacloud.store#%E4%BA%9A%E7%BE%8E%E5%B0%BC%E4%BA%9A_091510006 | 18ms
-vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@192.0.63.20:8880/?type=ws&encryption=none&host=reedfree8mahsang2.redorg.ir&path=%2F%3Fed%3D2560# By EbraSha 🪐 | 17ms
+vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws# By EbraSha 🚬 | 135ms
+vless://09fc1b02-c13b-4b54-ab86-21a7786cb38c@snapp.ir:80?path=%2F&security=none&encryption=none&host=derakhshan.molvliafor.ir&type=ws#@Vip_Security join us - 138 | 283ms
+vless://46aea670-5e6c-40af-9b99-95585dd71cc3@185.143.234.200:443?path=/?ed=443&security=tls&encryption=none&host=aiomovie.ir.wnticaceninl10.mahanmapcdn.com&fp=chrome&type=ws&sni=aiomovie.ir# By EbraSha 🧿 | 124ms
+vless://46aea670-5e6c-40af-9b99-95585dd71cc3@185.143.234.5:443?path=/?ed=443&security=tls&encryption=none&host=1001co.com.wnticacenich1.mapircdn.com&fp=chrome&type=ws&sni=1001co.com# By EbraSha 🧲 | 136ms
+vless://fa9eeceb-105d-4ab1-8f07-d072158522a9@185.143.233.238:2087?path=/&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=jy3ole58cb.pasarguardpro.ir#4Jadi-f7409553b6 | 132ms
+vless://73c4fdef-f27b-404f-8776-9fcd3d5d3acf@185.143.233.5:8880/?type=ws&encryption=none&host=getasa.ir&path=%2Fwp-admin# By EbraSha 🧠 | 132ms
+vless://4f78a389-42b5-48a0-be5e-4d23a6ff4c05@snapp.ir:8080?encryption=none&security=none&type=tcp&headerType=none&path=%2F#%40v2rayng3 | 128ms
+vless://7991189d-514d-4f6a-863e-abb0adefbfb0@185.143.233.120:80/?type=ws&amp;encryption=none&amp;flow=&amp;host=ger6.appmeli1.top&amp;path=%2F#[17656][IR][0][VLESS][None][freeconfigv2][2023-09-12][2026-09-13 01:45] | 141ms
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=Sha.artarona.ir&fp=chrome&type=ws&allowInsecure=0&sni=Sha.artarona.ir#4Sarina-aa612c362e | 246ms
+vless://699851b9-29ba-4006-94c5-3f10a42345c1@185.143.233.238:2082?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&path=%2Flkjoiyguyrd&security=none&encryption=mlkem768x25519plus.native.0rtt.cNOAxLpAiRYXwQqJC8RyG0pVl4ghUAJZqtaxYu3O1mg&host=cn.monotic.ir&type=ws# By EbraSha ⚡ | 129ms
+vless://8250d638-45df-41fa-b06f-160d1cb1de0c@162.159.136.81:443?security=tls&type=ws&sni=abc.vpneee.top&path=/YnqGMcAt/&encryption=none&headerType=none#%E5%8A%A0%E6%8B%BF%E5%A4%A7_%E5%A4%9A%E4%BC%A6%E5%A4%9A | 19ms
+vless://cc3a15eb-0a63-486c-8e12-c7be717ebcd4@199.34.228.186:8443?security=tls&sni=bPb005.paGes.DEV&type=ws&host=bPb005.paGes.DEV&path=%2Ffxhhv799mihz1xxp%2Fmtuyljy3ljiznc40oq%3D%3D%3Fed%3D2560&fp=chrome#🔒 VL-WS-TLS 🇺🇸 US-199.34.228.186:8443 | 17ms
+vless://50b7fc84-85b4-4043-b1f7-6477c9017a44@195.85.59.95:443?security=tls&sni=purlitefastest.pages.dev&type=ws&host=purlitefastest.pages.dev&path=%2Fpurlitefastest.pages.dev%2F%3Fed%3D2560#🔒 VL-WS-TLS 🇨🇾 CY-195.85.59.95:443 | 13ms
+vless://6202b230-417c-4d8e-b624-0f71afa9c75d@72.167.243.30:8880?security=none&type=ws&path=/&host=vms.lifetime55.workers.dev&packetEncoding=xudp#%E7%BE%8E%E5%9B%BD_0915101101 | 22ms
+vless://922b45c8-1ec8-4a65-9b32-137716a0e55f@69.84.182.18:2095/?type=ws&encryption=none&host=cdn-node-oss-99.paofu.de&path=%2Fprofile%2Ftelegram%40ssrsub# By EbraSha 💎 | 15ms
+vless://b2448f21-a3d4-43c4-b4ac-858f544cbe7f@185.238.228.164:80?security=&type=ws&path=/backup&host=NamE.DIVar.pRO&encryption=none#4Mohsen-2ed4f89367 | 12ms
+vless://AlfredConfig@164.38.155.135:443?&security=tls&fp=chrome&sni=alfi.yas-nowin.ir&type=ws&headerType=none&host=alfi.yas-nowin.ir&path=%2F%3Fed%3D2048#%E8%8B%B1%E5%9B%BD_091510036 | 11ms
+vless://d0f9437f-3c49-45c6-976b-ebea24158b39@194.76.18.237:2082?security=none&type=httpupgrade&host=finhztco.nipytee.info&path=%2F#🔒 VL-HTTPUPGRADE-NONE 🇰🇿 KZ-194.76.18.237:2082 | 6ms
+trojan://NISHIKUITAN111@185.193.28.17:443# By EbraSha 🕶️ | 6ms
+vless://fb5058f5-a9ed-424e-9ed7-33d455438286@154.92.9.2:8880?&type=ws&headerType=none&host=old-violet-a5ce.29-440.workers.dev&path=%2Fpyip%3DTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF_091510021 | 38ms
+vless://5931ee53-98dd-45bb-a3de-bdb9aa4331ae@185.159.247.12:2053?security=tls&amp;sni=dl12.peymod.com&amp;type=grpc&amp;serviceName=%40V2RIRAN-TEL--%40V2RIRAN-TEL--%40V2RIRAN-TEL--%40V2RIRAN-JOIN-%40V2RIRAN-TEL--%40V2RIRAN-JOIN-%40V2RIRAN-TEL-%40V2RIRAN-TEL--%40V2RIRAN-JOIN-%40V2RIRAN-TEL--%40V2RIRAN-%40ViV2ray%2F2053&amp;fp=chrome&amp;alpn=http%2F1.1%2Ch2#[13830][EE][0][VLESS][None][Hope_Net][2026-09-12][2026-09-13 01:45] | 12ms
+vless://fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf@147.78.140.168:8880/?type=ws&encryption=none&host=kjgx.laoyoutiao.link&path=Telegram%40WangCai2%2F%3Fed%3D2560#[36163][BG][0][VLESS][None][ext_raw.githubusercontent.com][2026-09-13][2026-09-13 01:45] | 9ms
+vless://34c01e61-f4f3-4afb-a83b-406caf8caa33@25.25.25.254:8880/?type=ws&encryption=none&host=yg.bantony199.top&path=%2F# By EbraSha 🔐 | 20ms
+vless://f775978b-6e22-41a8-ae5e-5f9779e6745f@27.50.49.13:443?encryption=none&security=tls&sni=juzibaipiao.5112233.xyz&type=ws&host=juzibaipiao.5112233.xyz&path=%2F#%E9%A6%99%E6%B8%AF_%E6%9F%B4%E7%81%A3 | 43ms
+trojan://tg-dns68@162.159.153.131:443?security=tls&sni=vip.putata.eu.org&type=ws&host=vip.putata.eu.org&path=%2F%3Fed%3D2560&fp=randomized&alpn=h3#🔒 TR-WS-TLS 🏴‍☠️ NA-162.159.153.131:443 | 7ms
+vless://a13df940-020c-465f-bc89-ee5279b5cd6a@194.76.18.243:443/?type=ws&encryption=none&path=%2Fblue&security=tls&sni=lk.kpcloud.eu.org# By EbraSha 🚀 | 60ms
+vless://fca01448-d84a-436e-9aec-3be1ebdfb350@199.34.228.46:443?security=tls&sni=sB-1u6.Pages.DEV&type=ws&path=%2Fif1pdmbi6sinplj2%2Fmtu4ljewms4ymdmumti3%3Fed%3D2560#🔒 VL-WS-TLS 🇺🇸 US-199.34.228.46:443 | 26ms
+vless://a13df940-020c-465f-bc89-ee5279b5cd6a@194.76.18.116:443?allowInsecure=0&sni=lw.kpcloud.eu.org&type=ws&host=lw.kpcloud.eu.org&path=/bluesecurity=tls#15|KZ_speednode_0029 | 20ms
+vless://40c708ca-42e4-4224-a12d-1dbd7ef1e0b7@161.145.150.77:8880/?type=ws&encryption=none&host=free.cfdns.online&path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2%20%2F%3Fed%3D2560# By EbraSha ⚙️ | 6ms
+vless://cc3a15eb-0a63-486c-8e12-c7be717ebcd4@199.34.228.167:2096?security=tls&sni=Bpb005.pageS.dev&type=ws&path=%2Fhzhfpw9gkziupyad%2Fmtuyljy3ljiznc40oq%3D%3D%3Fed%3D2560#🔒 VL-WS-TLS 🇺🇸 US-199.34.228.167:2096 | 13ms
